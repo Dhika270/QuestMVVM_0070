@@ -56,6 +56,17 @@ fun FormSiswa(
                 label = { Text(text = "Nama Lengkap") },
                 onValueChange = { txtNama = it }
             )
+            HorizontalDivider(
+                modifier = Modifier.width(250.dp),
+                thickness = dimensionResource(R.dimen.thickness_divider),
+                color = Color.Blue
+            )
+            Row(
+                modifier = Modifier.width(250.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+            }
         }
     }
 }
