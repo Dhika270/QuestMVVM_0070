@@ -96,6 +96,21 @@ fun FormSiswa(
                 label = { Text(text = "Alamat Lengkap") },
                 onValueChange = { txtAlamat = it }
             )
+            Spacer(modifier = Modifier.height(10.dp))
+            Button(
+                modifier = Modifier
+                    .width(250.dp)
+                    .height(50.dp),
+                enabled = txtAlamat.isNotEmpty(),
+                onClick = {
+                    listData[0] = txtNama
+                    listData[1] = txtGender
+                    listData[2] = txtAlamat
+                    onSubmitButtonClicked(listData)
+                }
+            ){
+                Text(stringResource(R.string.submit))
+            }
         }
     }
 }
